@@ -5,17 +5,85 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng
+ */
+
+:root {
+    --header-height: 46px;
+}
+
 
 #main {
 
 }
 
 #header {
-    height: 46px;
+    height: var(--header-height);
+    background-color: #000;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: var(--header-height);
+    padding: 0 24px;
+    display: block;
+
+}
+
+
+#nav li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+
 }
 
 #slider {
-
+    height: 500px;
+    /*background-color: #333;*/
 }
 
 #content {

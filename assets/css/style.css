@@ -20,14 +20,26 @@ html {
     --header-height: 46px;
 }
 
+.clear{
+    clear: both;
+}
+
 
 #main {
-
+    margin-top: var(--header-height);
 }
 
 #header {
     height: var(--header-height);
     background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#nav {
+    display: inline-block;
 }
 
 #nav, .subnav {
@@ -81,13 +93,105 @@ html {
 
 }
 
-#slider {
-    height: 500px;
-    /*background-color: #333;*/
+#nav .nav-arrow-down {
+    font-size: 14px;
 }
 
-#content {
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+}
 
+#header .search-btn:hover {
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color: #fff;
+    line-height: var(--header-height);
+
+}
+
+#slider {
+    /*height: 500px;*/
+    /*background-color: #333;*/
+    padding-top: 50%;
+    background: url('/assets/img/slider/chicago.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+#slider > .text-content {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 32px 16px;
+    text-align: center;
+
+}
+
+#slider .text-content .text-heading {
+    margin: 15px 0;
+}
+
+#slider .text-content .text-description {
+    margin: 15px 0;
+}
+
+
+#content {
+    height: 2000px;
+    background-color: #ccc;
+}
+
+#content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+#content .content-section .section-heading {
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#content .content-section .section-sub-heading {
+    text-align: center;
+    font-style: italic;
+    margin: 15px 0;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+#content .content-section .about-text {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#content .members-list {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
 }
 
 #footer {

@@ -16,6 +16,8 @@ html {
 4. Kiểu dáng
  */
 
+/*Common*/
+
 :root {
     --header-height: 46px;
 }
@@ -28,6 +30,53 @@ html {
 .text-white {
     color: #fff !important;
 }
+
+.text-center {
+    text-align: center;
+}
+
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+
+/*Main*/
 
 #main {
     margin-top: var(--header-height);
@@ -147,7 +196,7 @@ html {
 
 #content {
     height: 2000px;
-    background-color: #ccc;
+    /*background-color: #ccc;*/
 }
 
 #content .content-section {
@@ -182,10 +231,7 @@ html {
 }
 
 #content .member-item {
-    float: left;
-    width: 33.33333%;
     text-align: center;
-
 }
 
 #content .member-name {
@@ -238,23 +284,16 @@ html {
 
 .place-list {
     margin-top: 32px;
-    margin-left: -8px;
-    margin-right: -8px;
     padding-bottom: 48px;
+
 }
 
-.place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-}
-
-.place-item img {
+.place-list img {
     width: 100%;
     display: block;
 }
 
-.place-item img:hover {
+.place-list img:hover {
     opacity: 0.6;
 }
 
@@ -293,6 +332,39 @@ html {
     color: #000;
 }
 
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+i[class^=ti-] {
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+
+.contact-form .form-control {
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+.contact-form .form-submit {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+}
 
 #footer {
 
@@ -336,7 +408,7 @@ header.modal-header {
     margin-right: 16px;
 }
 
-.ti-close{
+.ti-close {
     position: absolute;
     right: 0;
     top: 0;
@@ -346,31 +418,31 @@ header.modal-header {
     opacity: .8;
 }
 
-.ti-close:hover{
+.ti-close:hover {
     opacity: 1;
 }
 
-.modal-body{
+.modal-body {
     padding: 16px;
 }
 
-.modal-label{
+.modal-label {
     display: block;
     font-size: 15px;
     margin-bottom: 12px;
 }
 
-.modal-input{
-    border:1px solid #ccc;
+.modal-input {
+    border: 1px solid #ccc;
     font-size: 15px;
     width: 100%;
     padding: 10px;
     margin-bottom: 24px;
 }
 
-#buy-tickets{
+#buy-tickets {
     background-color: #009688;
-    border:none;
+    border: none;
     color: #fff;
     width: 100%;
     font-size: 15px;
@@ -379,9 +451,10 @@ header.modal-header {
     cursor: pointer;
 }
 
-#buy-tickets:hover{
+#buy-tickets:hover {
     opacity: .9;
 }
+
 .modal-help {
     text-align: right;
 }
@@ -391,22 +464,24 @@ header.modal-header {
 }
 
 
-.modal-footer{
+.modal-footer {
     padding: 16px;
 }
 
-.modal-on{
+.modal-on {
     display: flex;
 }
 
 
-@keyframes modal-fade-in{
-    from{
+@keyframes modal-fade-in {
+    from {
         transform: translateY(-140px);
         opacity: 0;
     }
-    to{
+    to {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
+

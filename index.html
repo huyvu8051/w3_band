@@ -54,21 +54,19 @@
 
 
             </p>
-            <div class="members-list">
-                <div class="member-item">
+            <div class="row members-list">
+                <div class="col col-third text-center">
                     <div class="member-name">Name</div>
                     <img src="assets/img/band/bandmember.jpg" class="member-img"/>
                 </div>
-                <div class="member-item">
+                <div class="col col-third text-center">
                     <div class="member-name">Name</div>
                     <img src="assets/img/band/bandmember.jpg" class="member-img"/>
                 </div>
-                <div class="member-item">
+                <div class="col col-third text-center">
                     <div class="member-name">Name</div>
                     <img src="assets/img/band/bandmember.jpg" class="member-img"/>
                 </div>
-
-                <div class="clear"></div>
             </div>
 
         </div>
@@ -84,8 +82,8 @@
                     <li>November <span class="quantity">3</span></li>
                 </ul>
 
-                <div class="place-list">
-                    <div class="place-item">
+                <div class="row place-list">
+                    <div class="col col-third">
                         <img src="assets/img/place/newyork.jpg" alt="New York"/>
                         <div class="place-body">
                             <h3 class="place-heading">New York</h3>
@@ -96,7 +94,7 @@
                             <a href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</a>
                         </div>
                     </div>
-                    <div class="place-item">
+                    <div class="col col-third">
                         <img src="assets/img/place/paris.jpg" alt="New York"/>
                         <div class="place-body">
                             <h3 class="place-heading">New York</h3>
@@ -107,7 +105,7 @@
                             <a href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</a>
                         </div>
                     </div>
-                    <div class="place-item">
+                    <div class="col col-third">
                         <img src="assets/img/place/sanfran.jpg" alt="New York"/>
                         <div class="place-body">
                             <h3 class="place-heading">New York</h3>
@@ -130,6 +128,37 @@
             <p class="section-sub-heading">
                 Fan? Drop a note!
             </p>
+
+            <div class="row contact-content">
+                <div class="col col-half contact-info">
+                    <p><i class="ti-location-pin"></i>Chicago, US</p>
+                    <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                    <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                </div>
+                <div class="col col-half contact-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" name="name" id="name" required class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col col-half">
+                                <input type="text" name="email" id="email" required class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="row mt-8">
+                            <div class="col col-full">
+                                <input name="message" type="text" class="form-control" required placeholder="Message">
+                            </div>
+                        </div>
+                        <input type="submit" class="form-submit mt-16 wp-right" value="SEND">
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-container">
+
+            </div>
 
         </div>
 
@@ -181,7 +210,7 @@
     }))
 
 
-    document.querySelector('.modal-container').addEventListener('click', e=>{
+    document.querySelector('.modal-container').addEventListener('click', e => {
         e.stopPropagation()
     })
 
